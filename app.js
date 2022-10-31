@@ -41,11 +41,6 @@ function resetFace() {
     shedContainer.classList.remove('face');
 }
 
-function displayResults() {
-    winsEl.textContent = correctGuesses;
-    totalEl.textContent = totalGuesses;
-}
-
 function handleGuess(correctSpot, userGuess) {
     // reset the styles
     resetFace();
