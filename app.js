@@ -22,6 +22,9 @@ treeButton.addEventListener('click', () => {
     const hidingSpot = Math.floor(Math.random() * 3);
     const answer = hidingPlaces[hidingSpot];
     handleGuess(answer, 'tree');
+    if (answer === 'tree') {
+        correctGuesses++;
+    }
 });
 
 boulderButton.addEventListener('click', () => {
@@ -29,6 +32,9 @@ boulderButton.addEventListener('click', () => {
     const hidingSpot = Math.floor(Math.random() * 3);
     const answer = hidingPlaces[hidingSpot];
     handleGuess(answer, 'boulder');
+    if (answer === 'boulder') {
+        correctGuesses++;
+    }
 });
 
 shedButton.addEventListener('click', () => {
@@ -36,6 +42,9 @@ shedButton.addEventListener('click', () => {
     const hidingSpot = Math.floor(Math.random() * 3);
     const answer = hidingPlaces[hidingSpot];
     handleGuess(answer, 'shed');
+    if (answer === 'shed') {
+        correctGuesses++;
+    }
 });
 
 function handleGuess(correctSpot, userGuess) {
