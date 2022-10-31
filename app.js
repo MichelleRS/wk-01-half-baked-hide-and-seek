@@ -16,7 +16,6 @@ const hidingPlaces = ['tree', 'shed', 'boulder'];
 
 let correctGuesses = 0;
 let totalGuesses = 0;
-// let totalLosses = 0;
 
 treeButton.addEventListener('click', () => {
     const hidingSpot = Math.floor(Math.random() * 3);
@@ -44,7 +43,6 @@ function resetFace() {
 
 function displayResults() {
     winsEl.textContent = correctGuesses;
-    // lossesEl.textContent = totalLosses;
     totalEl.textContent = totalGuesses;
 }
 
