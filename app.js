@@ -27,7 +27,11 @@ treeButton.addEventListener('click', () => {
     if (answer === 'tree') {
         correctGuesses++;
         treeContainer.classList.add('face');
+    } else if (answer === 'boulder') {
+        boulderContainer.classList.add('face');
+        totalLosses++;
     } else {
+        shedContainer.classList.add('face');
         totalLosses++;
     }
     displayResults();
@@ -42,7 +46,11 @@ boulderButton.addEventListener('click', () => {
     if (answer === 'boulder') {
         correctGuesses++;
         boulderContainer.classList.add('face');
+    } else if (answer === 'tree') {
+        treeContainer.classList.add('face');
+        totalLosses++;
     } else {
+        shedContainer.classList.add('face');
         totalLosses++;
     }
     displayResults();
@@ -57,7 +65,11 @@ shedButton.addEventListener('click', () => {
     if (answer === 'shed') {
         correctGuesses++;
         shedContainer.classList.add('face');
+    } else if (answer === 'tree') {
+        treeContainer.classList.add('face');
+        totalLosses++;
     } else {
+        boulderContainer.classList.add('face');
         totalLosses++;
     }
     displayResults();
