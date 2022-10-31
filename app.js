@@ -26,12 +26,11 @@ treeButton.addEventListener('click', () => {
     handleGuess(answer, 'tree');
     if (answer === 'tree') {
         correctGuesses++;
-        console.log(correctGuesses + 'W');
         treeContainer.classList.add('face');
     } else {
         totalLosses++;
-        console.log(totalLosses + 'L');
     }
+    displayResults();
 });
 
 boulderButton.addEventListener('click', () => {
@@ -42,12 +41,11 @@ boulderButton.addEventListener('click', () => {
     handleGuess(answer, 'boulder');
     if (answer === 'boulder') {
         correctGuesses++;
-        console.log(correctGuesses + 'W');
         boulderContainer.classList.add('face');
     } else {
         totalLosses++;
-        console.log(totalLosses + 'L');
     }
+    displayResults();
 });
 
 shedButton.addEventListener('click', () => {
@@ -58,18 +56,23 @@ shedButton.addEventListener('click', () => {
     handleGuess(answer, 'shed');
     if (answer === 'shed') {
         correctGuesses++;
-        console.log(totalGuesses + 'W');
         shedContainer.classList.add('face');
     } else {
         totalLosses++;
-        console.log(totalLosses + 'L');
     }
+    displayResults();
 });
 
 function resetFace() {
     treeContainer.classList.remove('face');
     boulderContainer.classList.remove('face');
     shedContainer.classList.remove('face');
+}
+
+function displayResults() {
+    winsEl.textContent = correctGuesses;
+    lossesEl.textContent = totalLosses;
+    totalEl.textContent = totalGuesses;
 }
 
 function handleGuess(correctSpot, userGuess) {
