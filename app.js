@@ -16,6 +16,7 @@ const hidingPlaces = ['tree', 'shed', 'boulder'];
 
 let correctGuesses = 0;
 let totalGuesses = 0;
+let totalLosses = 0;
 
 treeButton.addEventListener('click', () => {
     totalGuesses++;
@@ -24,6 +25,10 @@ treeButton.addEventListener('click', () => {
     handleGuess(answer, 'tree');
     if (answer === 'tree') {
         correctGuesses++;
+        console.log(correctGuesses + 'W');
+    } else {
+        totalLosses++;
+        console.log(totalLosses + 'L');
     }
 });
 
@@ -34,6 +39,10 @@ boulderButton.addEventListener('click', () => {
     handleGuess(answer, 'boulder');
     if (answer === 'boulder') {
         correctGuesses++;
+        console.log(correctGuesses + 'W');
+    } else {
+        totalLosses++;
+        console.log(totalLosses + 'L');
     }
 });
 
@@ -44,6 +53,10 @@ shedButton.addEventListener('click', () => {
     handleGuess(answer, 'shed');
     if (answer === 'shed') {
         correctGuesses++;
+        console.log(totalGuesses + 'W');
+    } else {
+        totalLosses++;
+        console.log(totalLosses + 'L');
     }
 });
 
